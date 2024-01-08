@@ -16,6 +16,18 @@ use Inertia\Inertia;
 |
 */
 
+//Untuk Memastikan Fungsi Roles berjalan dengan baik : 
+
+// Route::get('admin', function() {
+//     return 'Hi Admin';
+// })->middleware('role:admin');
+
+// Route::get('user', function() {
+//     return 'Hi User';
+// })->middleware('role:user');
+
+// end test fungsi roles
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
